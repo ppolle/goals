@@ -24,13 +24,13 @@
             <!-- Date Input -->
             <div class="form-group">
                 <label for="complete">Completion</label>
-                <input type='date' id="complete" [(ngModel)]="newGoal.completeDate" name="completeDate" #completeDate="ngModel" required >
+                <input class="form-control" type='date' id="complete" [(ngModel)]="newGoal.completeDate" name="completeDate" #completeDate="ngModel" required >
                 <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
                     <p> Complete Date is Required</p>
                     
                 </div>
             </div>
-            <button type="Submit" class="btn btn-success btn-lg">Add Goal</button>
+            <button type="Submit" class="btn btn-success btn-block">Add Goal</button>
         </form>
     </div>
 </div>
