@@ -15,10 +15,13 @@ import { DateCountPipe } from './date-count.pipe';
 import { GoalFormComponent } from './goal-form/goal-form.component';
 import {AlertsService} from './alert-service/alerts.service';
 import { AboutComponent } from './about/about.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes:Routes=[
   {path:"goals",component:GoalComponent},
-  {path:"about",component:AboutComponent}
+  {path:"about",component:AboutComponent},
+  {path:"",redirectTo:"/goals",pathMatch:"full"},
+  {path:'**',component:NotFoundComponent}
 ]
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ const routes:Routes=[
     StrikethroughDirective,
     DateCountPipe,
     GoalFormComponent,
-    AboutComponent
+    AboutComponent,
+    NotFoundComponent
      ],
   imports: [
     BrowserModule,
