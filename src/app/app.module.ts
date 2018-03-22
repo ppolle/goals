@@ -4,7 +4,8 @@ import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
-import { RouterModule, Routes } from '@angular/router';
+import {RoutingModule} from './routing/routing.module';
+
 
 
 import { AppComponent } from './app.component';
@@ -17,12 +18,7 @@ import {AlertsService} from './alert-service/alerts.service';
 import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-const routes:Routes=[
-  {path:"goals",component:GoalComponent},
-  {path:"about",component:AboutComponent},
-  {path:"",redirectTo:"/goals",pathMatch:"full"},
-  {path:'**',component:NotFoundComponent}
-]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,10 +33,11 @@ const routes:Routes=[
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule,
-    NgProgressModule.forRoot(),// normal progress bar
-    NgProgressHttpModule ,// progress bar to load http requests
-    RouterModule.forRoot(routes)
+    RoutingModule,
+    HttpClientModule,  
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule 
+    
   ],
   providers: [AlertsService],
   bootstrap: [AppComponent]
