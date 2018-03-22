@@ -130,6 +130,18 @@ MIT
 MIT
 MIT
 
+@ngx-progressbar/core@4.1.1
+MIT
+MIT
+
+@ngx-progressbar/http@4.1.1
+MIT
+MIT
+
+@angular/router@5.2.8
+MIT
+MIT
+
 @angular/platform-browser-dynamic@5.2.8
 MIT
 MIT
